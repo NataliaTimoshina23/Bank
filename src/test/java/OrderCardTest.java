@@ -41,7 +41,7 @@ class OrderCardTest {
     public void shouldOrderCard() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Мария");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79533333333");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -54,7 +54,7 @@ class OrderCardTest {
     public void shouldOrderCardIfNameWithHyphen() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Анна-Мария");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья-Мария");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79533333333");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -67,7 +67,7 @@ class OrderCardTest {
     public void shouldOrderCardIfDoubleName() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Анна Мария");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья Мария");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79533333333");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -80,7 +80,7 @@ class OrderCardTest {
     public void shouldOrderCardIfNameWithJ() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Алексей");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошин Алексей");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79533333333");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -93,7 +93,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfNameInEnglishWord() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Bondarenko Mariya");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Timoshina Natalia");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79533333333");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -106,7 +106,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfNameWithYo() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Семён");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошин Семён");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79533333333");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -145,7 +145,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfNameWithSpecialSymbols() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Мари%я Бо;ндаренко");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Мари%я Ти;ошина");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79533333333");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -158,7 +158,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfNameWithNumbers() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Мария 123");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Наталия 123");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79533333333");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -250,8 +250,8 @@ class OrderCardTest {
     public void shouldNotOrderCardIfPhoneWithEnglishLetters() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Мария");
-        form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("Maria");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья");
+        form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("Natalia");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
 
@@ -263,7 +263,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfPhoneWithHieroglyphs() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Мария");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("愛愛愛愛");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -276,7 +276,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfPhoneWithArabianLigature() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Мария");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("العلم نور والجهل ظلام");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -289,7 +289,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfPhoneWithSpecialSymbols() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Мария");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+7$325452");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -302,7 +302,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfPhoneWithSpaceBar() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Мария");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("  ");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -315,7 +315,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfPhoneIsNotFilled() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Мария");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -328,7 +328,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfPhoneIsWrong() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Мария");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("79533333333");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -341,7 +341,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfNoClickAgreement() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Мария");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79533333333");
 
         form.findElement(By.cssSelector(".button")).click();

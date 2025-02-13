@@ -1,1 +1,1 @@
-# Bank
+[![Java CI with Gradle](https://github.com/NataliaTimoshina23/Bank/actions/workflows/gradle.yml/badge.svg)](https://github.com/NataliaTimoshina23/Bank/actions/workflows/gradle.yml)# Bank

@@ -211,7 +211,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfPhone10Letters() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Мария");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+7933333333");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -224,7 +224,7 @@ class OrderCardTest {
     public void shouldNotOrderCardIfPhone3Letters() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Мария");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+733");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
@@ -237,8 +237,8 @@ class OrderCardTest {
     public void shouldNotOrderCardIfPhoneWithRussianLetters() {
 
         WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Бондаренко Мария");
-        form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("Мария");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Тимошина Наталья");
+        form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("Наталья");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
 
